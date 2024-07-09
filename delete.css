@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f8f5;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 80px; /* Account for fixed navbar height */
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 6%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 88%;
+    z-index: 1000;
+}
+
+header.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #45a29e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #45a29e;
+}
+
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.container {
+    margin-top: 100px; /* To avoid being hidden behind fixed navbar */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* Data Inserted Successfuly */
+.success{
+    margin-top: 100px; /* To avoid being hidden behind fixed navbar */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+}

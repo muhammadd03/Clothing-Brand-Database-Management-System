@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Form</title>
+    <link rel="stylesheet" type="text/css" href="shared2.css">
+    <script src="loadheader.js" defer></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <form action="customer_insert.php" method="post">
+        <h2>Enter Customer Details</h2>
+        <label for="CustomerID">Customer ID:</label>
+        <input type="hidden" id="CustomerID" name="CustomerID" required><br><br>
+        
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br><br>
+        
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9]+@[a-zA-Z]+.(com)$"><br><br>        
+        
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="phone" required pattern="^03[0-9]{9}$"><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="datejoine">Date Joined:</label>
+        <input type="date" id="datejoined" name="datejoined" value="<?php echo date('Y-m-d'); ?>" required><br><br>
+
+        <label for="remarks">Remarks:</label>
+        <input type="text" id="remarks" name="remarks" required><br><br>
+        
+        <input type="submit" value="Submit">
+        <div class="form-buttons">
+            <a href="customer_retrieve_data.php">Click here to show all data</a>
+            <!-- <a href="homepage3.html" class="button">Back to Home</a> -->
+        </div>
+    </form>
+</body>
+</html>

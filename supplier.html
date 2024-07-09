@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplier Form</title>
+    <link rel="stylesheet" type="text/css" href="shared2.css">
+    <script src="loadheader.js" defer></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <form action="supplier_insert.php" method="post">
+        <h2>Enter Supplier Details</h2>
+        <label for="SupplierID">Supplier ID:</label>
+        <input type="hidden" id="SupplierID" name="SupplierID" required><br><br>
+        
+        <label for="suppliername">Supplier Name:</label>
+        <input type="text" id="suppliername" name="suppliername" required><br><br>
+        
+        <label for="supplierlocation">Supplier Location:</label>
+        <input type="text" id="supplierlocation" name="supplierlocation" required><br><br>        
+        
+        <label for="suppliercontact">Supplier Contact:</label>
+        <input type="number" id="suppliercontact" name="suppliercontact" required pattern="^03[0-9]{9}$"><br><br>
+
+        <input type="submit" value="Submit">
+        <div class="form-buttons">
+            <a href="supplier_retrieve_data.php">Click here to show all data</a>
+            <!-- <a href="homepage3.html" class="button">Back to Home</a> -->
+        </div>
+    </form>
+</body>
+</html>

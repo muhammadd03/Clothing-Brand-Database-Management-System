@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="shared2.css">
+        <script src="loadheader.js" defer></script>
+        <title>Expenditure Form</title>
+    </head>
+<body>
+    <div id="header-placeholder"></div>
+    <form action="expenditure_insert.php" method="post">
+        <h2>Enter Expenditure Details</h2>
+        <label for="ExpenditureID">Expenditure ID:</label>
+        <input type="hidden" id="ExpenditureID" name="ExpenditureID" required><br><br>
+        
+        <label for="expdate">Date:</label>
+        <input type="date" id="expdate" name="expdate" required><br><br>
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="remarks">Remarks:</label>
+        <input type="text" id="remarks" name="remarks" required><br><br>
+        
+        <input type="submit" value="Submit">
+        <div class="form-buttons">
+            <a href="expenditure_retrieve_data.php">Click here to show all data</a>
+            <!-- <a href="homepage3.html" class="button">Back to Home</a> -->
+        </div>
+    </form>
+</body>
+</html>

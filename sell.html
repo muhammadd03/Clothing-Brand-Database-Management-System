@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sell Form</title>
+    <link rel="stylesheet" type="text/css" href="shared2.css">
+    <script src="loadheader.js" defer></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <form action="sell_insert.php" method="post">
+        <h2>Enter Sell Details</h2>
+        <label for="SellID">Sell ID:</label>
+        <input type="hidden" id="SellID" name="SellID" required><br><br>
+
+        <label for="CustomerID">Customer ID:</label>
+        <input type="number" id="CustomerID" name="CustomerID" required><br><br>
+        
+        <label for="ProductID">Product ID:</label>
+        <input type="number" id="ProductID" name="ProductID" required><br><br>
+        
+        <label for="sellingprice">Selling Price:</label>
+        <input type="number" id="sellingprice" name="sellingprice" required><br><br>
+
+        <label for="dateofpurchase">Date of Purchase:</label>
+        <input type="date" id="dateofpurchase" name="dateofpurchase" required><br><br>        
+        
+        <input type="submit" value="Submit">
+        <div class="form-buttons">
+            <a href="sell_retrieve_data.php">Click here to show all data</a>
+            <!-- <a href="homepage3.html" class="button">Back to Home</a> -->
+        </div>
+    </form>
+</body>
+</html>

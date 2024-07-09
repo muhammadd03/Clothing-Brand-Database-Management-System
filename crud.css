@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f8f5;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 80px; /* Account for fixed navbar height */
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 6%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 88%;
+    z-index: 1000;
+}
+
+header.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #45a29e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #45a29e;
+}
+
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.container {
+    margin-top: 100px; /* To avoid being hidden behind fixed navbar */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 120 auto;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #45a29e;
+    color: white;
+}
+
+td input[type='text'] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+td a {
+    text-decoration: none;
+    color: #45a29e;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0; /* Changed to left side */
+    background-color: #333;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scroll */
+    transition: width 0.5s ease;
+    padding-top: 60px;
+    padding-bottom: 20px; /* Ensure there's space for the last item */
+}
+
+.side-menu a,
+.side-menu .dropbtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover,
+.side-menu .dropbtn:hover {
+    background-color: #575757;
+    cursor: pointer;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px; /* Keep it on the right side */
+    font-size: 36px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown-content a {
+    font-size: 18px;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+    .navbar .hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+}
